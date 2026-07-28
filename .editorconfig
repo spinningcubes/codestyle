@@ -1,0 +1,21 @@
+# Spinningcubes CodeStyle - Naming Visual Studio
+[*.{c++,cc,cpp,cppm,cxx,h,h++,hh,hpp,hxx,inl,ipp,ixx,tlh,tli}]
+
+# Naming convention symbols         
+# applicable_type - bool, int, std::string ,etc
+# applicable_kinds - 
+#   class, struct, enum
+#   property, method, field
+#   local, parameter, namespace
+#   delegate
+cpp_naming_symbols.boolean_vars.applicable_type           = bool
+cpp_naming_symbols.boolean_vars.applicable_kinds          = local,parameter,field
+
+# Naming convention styles
+cpp_naming_style.boolean_style.capitalization = pascal_case
+cpp_naming_style.boolean_style.required_prefix = b
+
+# Naming convention rules (note: currently need to be ordered from more to less specific)
+cpp_naming_rule.booleans_prefixed.symbols                 = boolean_vars
+cpp_naming_rule.booleans_prefixed.style                   = boolean_style
+
