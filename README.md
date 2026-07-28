@@ -1,0 +1,2 @@
+# codestyle
+Spinningcubes code style
