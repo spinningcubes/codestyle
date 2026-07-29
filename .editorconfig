@@ -1,21 +1,84 @@
 # Spinningcubes CodeStyle - Naming Visual Studio
 [*.{c++,cc,cpp,cppm,cxx,h,h++,hh,hpp,hxx,inl,ipp,ixx,tlh,tli}]
 
-# Naming convention symbols         
-# applicable_type - bool, int, std::string ,etc
-# applicable_kinds - 
-#   class, struct, enum
-#   property, method, field
-#   local, parameter, namespace
-#   delegate
-cpp_naming_symbols.boolean_vars.applicable_type           = bool
-cpp_naming_symbols.boolean_vars.applicable_kinds          = local,parameter,field
+# =====================================================
+# Naming Styles
+# =====================================================
 
-# Naming convention styles
-cpp_naming_style.boolean_style.capitalization = pascal_case
-cpp_naming_style.boolean_style.required_prefix = b
+cpp_naming_style.pascal_case.capitalization = pascal_case
 
-# Naming convention rules (note: currently need to be ordered from more to less specific)
-cpp_naming_rule.booleans_prefixed.symbols                 = boolean_vars
-cpp_naming_rule.booleans_prefixed.style                   = boolean_style
+cpp_naming_style.camel_case.capitalization = camel_case
+
+cpp_naming_style.member_case.capitalization = camel_case
+#cpp_naming_style.member_case.required_suffix = _
+
+
+# =====================================================
+# Classes -> PascalCase
+# =====================================================
+
+cpp_naming_rule.classes_pascal.symbols = class_symbols
+cpp_naming_rule.classes_pascal.style = pascal_case
+
+cpp_naming_symbols.class_symbols.applicable_kinds = class
+
+
+# =====================================================
+# Structs -> PascalCase
+# =====================================================
+
+cpp_naming_rule.structs_pascal.symbols = struct_symbols
+cpp_naming_rule.structs_pascal.style = pascal_case
+
+cpp_naming_symbols.struct_symbols.applicable_kinds = struct
+
+
+# =====================================================
+# Enums -> PascalCase
+# =====================================================
+
+cpp_naming_rule.enums_pascal.symbols = enum_symbols
+cpp_naming_rule.enums_pascal.style = pascal_case
+
+cpp_naming_symbols.enum_symbols.applicable_kinds = enum
+
+
+# =====================================================
+# Functions -> PascalCase
+# =====================================================
+
+cpp_naming_rule.functions_pascal.symbols = function_symbols
+cpp_naming_rule.functions_pascal.style = pascal_case
+
+cpp_naming_symbols.function_symbols.applicable_kinds = function
+
+
+# =====================================================
+# Local Variables -> camelCase
+# =====================================================
+
+cpp_naming_rule.locals_camel.symbols = local_symbols
+cpp_naming_rule.locals_camel.style = camel_case
+
+cpp_naming_symbols.local_symbols.applicable_kinds = local
+
+
+# =====================================================
+# Parameters -> camelCase
+# =====================================================
+
+cpp_naming_rule.parameters_camel.symbols = parameter_symbols
+cpp_naming_rule.parameters_camel.style = camel_case
+
+cpp_naming_symbols.parameter_symbols.applicable_kinds = parameter
+
+
+# =====================================================
+# Member Variables -> camelCase_
+# =====================================================
+
+cpp_naming_rule.members_camel_suffix.symbols = member_symbols
+cpp_naming_rule.members_camel_suffix.style = member_case
+
+cpp_naming_symbols.member_symbols.applicable_kinds = field
 

@@ -1,10 +1,23 @@
 ---
-# Spinningcubes CodeStyle - Format
-BasedOnStyle: Microsoft
-AccessModifierOffset: -4
-IndentWidth: 4
-UseTab: Never
+# Spinningcubes CodeStyle - Code Formatting Configuration
 
+Language: Cpp
+BasedOnStyle: Microsoft
+
+# Indentation
+IndentWidth: 4
+AccessModifierOffset: -4
+IndentAccessModifiers: false
+IndentPPDirectives: BeforeHash
+IndentCaseLabels: true
+NamespaceIndentation: None
+UseTab: Never                       # Better diffs
+
+# Line Length 
+ColumnLimit: 120                    # 120 chars (widescreen life)
+
+
+# Braces 
 BraceWrapping:
   AfterCaseLabel: false
   AfterClass: true
